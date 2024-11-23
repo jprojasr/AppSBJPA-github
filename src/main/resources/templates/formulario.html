@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8"/>
+    <title th:text="${titulo}"></title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand">SpringBoot JPA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/formulario}">Agregar Cliente</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/listarPorCiudad}">Listar Por Ciudad</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/listar}">Listar Clientes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <h1 class="text-secondary" th:text="${titulo}"></h1>
+      <form th:action="@{${urlDestino}}" th:object="${cliente}" method="post">
+        <div class="mb-3">
+          <label class="col-sm-2 col-form-label">Nombre:</label>
+
+          <div class="col-sm-6">
+            <input type="text" th:field="*{nombre}" class="form-control" th:errorclass="'form-control is-invalid'"/>
+            <small class="invalid-feedback" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="col-sm-2 col-form-label">Apellido:</label>
+
+          <div class="col-sm-6">
+            <input type="text" th:field="*{apellido}" class="form-control" th:errorclass="'form-control is-invalid'"/>
+            <small class="invalid-feedback" th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="col-sm-2 col-form-label">Correo Electrónico:</label>
+
+          <div class="col-sm-6">
+            <input type="text" th:field="*{correoE}" class="form-control" th:errorclass="'form-control is-invalid'"/>
+            <small class="invalid-feedback" th:if="${#fields.hasErrors('correoE')}" th:errors="*{correoE}"></small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="col-sm-2 col-form-label">Fecha de Creacion:</label>
+
+          <div class="col-sm-6">
+            <input type="text" th:field="*{creacion}" class="form-control" th:errorclass="'form-control is-invalid'"/>
+            <small class="invalid-feedback" th:if="${#fields.hasErrors('creacion')}" th:errors="*{creacion}"></small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="col-sm-2 col-form-label">Region:</label>
+
+          <div class="col-sm-6">
+            <input type="text" th:field="*{direccion.region}" class="form-control" th:errorclass="'form-control is-invalid'"/>
+            <small class="invalid-feedback" th:if="${#fields.hasErrors('direccion.region')}" th:errors="*{direccion.region}"></small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="col-sm-2 col-form-label">Ciudad:</label>
+
+          <div class="col-sm-6">
+            <input type="text" th:field="*{direccion.ciudad}" class="form-control" th:errorclass="'form-control is-invalid'"/>
+            <small class="invalid-feedback" th:if="${#fields.hasErrors('direccion.ciudad')}" th:errors="*{direccion.ciudad}"></small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="col-sm-2 col-form-label">Dirección:</label>
+
+          <div class="col-sm-6">
+            <input type="text" th:field="*{direccion.direccion}" class="form-control" th:errorclass="'form-control is-invalid'"/>
+            <small class="invalid-feedback" th:if="${#fields.hasErrors('direccion.direccion')}" th:errors="*{direccion.direccion}"></small>
+          </div>
+        </div>
+
+
+
+        <div class="mt-3 mb-3">
+          <div class="col-sm-6">
+            <button type="submit" class="btn btn-dark">Guardar</button>
+          </div>
+        </div>
+
+        <input type="hidden" th:field="*{id}"/>
+      </form>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+              crossorigin="anonymous"></script>
+  </body>
+</html>

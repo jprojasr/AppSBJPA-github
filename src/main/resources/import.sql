@@ -1,0 +1,10 @@
+--INSERT INTO clientes (nom_cli, ape_cli, cor_cli, cre_cli) VALUES('Felipe', 'Cuevas', 'fcuevas@edutecno.com', '2021-04-23');
+--INSERT INTO clientes (nom_cli, ape_cli, cor_cli, cre_cli) VALUES('Nelson', 'Carvajal', 'ncarvajal@edutecno.com', '2021-04-20');
+--INSERT INTO clientes (nom_cli, ape_cli, cor_cli, cre_cli) VALUES('Carlos', 'Martínez', 'cmartinez@edutecno.com', '2022-03-15');
+--INSERT INTO clientes (nom_cli, ape_cli, cor_cli, cre_cli) VALUES('Ana', 'Gómez', 'agomez@edutecno.com', '2021-11-25');
+--INSERT INTO clientes (nom_cli, ape_cli, cor_cli, cre_cli) VALUES('Pedro', 'López', 'plopez@edutecno.com', '2023-01-10');
+--INSERT INTO clientes (nom_cli, ape_cli, cor_cli, cre_cli) VALUES('Sofía', 'Pérez', 'sperez@edutecno.com', '2020-08-30');
+--INSERT INTO clientes (nom_cli, ape_cli, cor_cli, cre_cli) VALUES('Luis', 'Ramírez', 'lramirez@edutecno.com', '2021-06-18');
+--INSERT INTO clientes (nom_cli, ape_cli, cor_cli, cre_cli) VALUES('Marta', 'Fernández', 'mfernandez@edutecno.com', '2023-05-02');
+--INSERT INTO clientes (nom_cli, ape_cli, cor_cli, cre_cli) VALUES('José', 'Sánchez', 'jsanchez@edutecno.com', '2022-09-07');
+--INSERT INTO clientes (nom_cli, ape_cli, cor_cli, cre_cli) VALUES('Elena', 'Vázquez', 'evazquez@edutecno.com', '2020-12-12');
